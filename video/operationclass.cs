@@ -15,7 +15,7 @@ namespace video
         DataSet d = new DataSet();
         public string connectionstring()
         {
-            return(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anilm\Desktop\video\video\Database2.mdf;Integrated Security=True");
+            return(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anilm\source\repos\video\video\Database2.mdf;Integrated Security=True");
         }
 
         
