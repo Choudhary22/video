@@ -74,7 +74,7 @@ namespace video
             con.Close();
             operationclass f = new operationclass();
             string str = f.connectionstring();
-            con.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + str + "Database1.mdf" + ";Integrated Security=True";
+            con.ConnectionString = str;
             com.CommandType = CommandType.Text;
             com.CommandText = "update Customer set FirstName='" + textBox1.Text + "',LastName='" + textBox2.Text + "',Address='" + textBox3.Text + "',Phone='" + textBox4.Text + "' where CustID=" + textBox5.Text;
 
@@ -95,13 +95,14 @@ namespace video
             string str = f.connectionstring();
 
 
-            con.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + str + "Database1.mdf" + ";Integrated Security=True";
+            con.ConnectionString = str;
             com.CommandType = CommandType.Text;
             com.CommandText = "delete from Customer where CustID=" + textBox5.Text;
 
             adap.DeleteCommand = com;
             com.Connection = con;
             con.Open();
+
             com.ExecuteNonQuery();
       
             textBox1.Text = "";
